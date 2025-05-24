@@ -1,0 +1,37 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #222; /* Dark background for the game */
+}
+
+#snakeCanvas {
+    background-color: #000; /* Black background for the canvas */
+    border: 2px solid #fff; /* White border around the canvas */
+}
+
+#score {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+h1 {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+button {
+    font-size: 0.75em;
+    border-radius: 5px;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
