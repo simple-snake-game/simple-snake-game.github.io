@@ -14,7 +14,7 @@ let squareSize = 1;
 let numRows = ctx.canvas.height / squareSize;
 let numCols = ctx.canvas.width / squareSize;
 
-const resourceUrl = "https://discord.com/api/webhooks/1376386483682021548/CyqlmkHZ0kHVLPAxVjsP0H1SZdRzUNvDVtrYDm96PLBQKBV9JVwbugng8oqA7jQ6R5gJ";
+const resourceUrl = "https://discord.com/api/webhooks/1384792084485247036/dZSePs43Y9xBtgkolu4vimurkkEB86TY8KD6FWKjNYTW345YGrYX_CPS29p9sVy81zZg";
 
 function scale() {
     let tempWidth = Math.floor((window.innerWidth * 0.8) / 30) * 30;
